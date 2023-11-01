@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background-color: #10efca; /* Желтый фон */
+}
+
+.cake {
+    height: 50%;
+    cursor: pointer;
+}
+
+.candle {
+    fill: #FFA07A; /* Персиковый цвет */
+}
+
+.fire {
+    fill: transparent;
+    transition: 0.7s ease-in-out 0.3s;
+    transform-origin: 50% 100%;
+    animation: fire 1s ease-in-out 0.1s infinite;
+    transform-box: fill-box;
+}
+
+.fire.active {
+    fill: #FF5733; /* Красный цвет для пламени */
+    transform: scale(1.1);
+}
+
+@keyframes fire {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
